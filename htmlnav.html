@@ -1,0 +1,648 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Associative array ==> Html Nav</title>
+		<style type="text/css">
+			html { font-family: "trebuchet ms", sans-serif; font-size: 0.875em; }
+			ul { list-style-type: disc; }
+			li { line-height: 1.5em; }
+			li.active > a { font-weight: bold; }
+			a { color: #a03133; text-decoration: none; }
+			a:hover { color: #501819; }
+		</style>
+	</head>
+	<body>
+		<h1>Associative array ==> Html nav</h1>
+		<nav id="campus"></nav>
+		<select id="test-the-nav">
+			<option data-campus="" data-url="">Select a navigational element...</option>
+			<option data-campus="university" data-url="/aboutjwu/">university-About JWU</option>
+			<option data-campus="university" data-url="/aboutjwu/letterfromthepresident/">university-Letter from President</option>
+			<option data-campus="university" data-url="/aboutjwu/historyofjwu/">university-History of JWU</option>
+			<option data-campus="university" data-url="/aboutjwu/missionandpurposes/">university-Mission & Principles</option>
+			<option data-campus="university" data-url="/aboutjwu/campuses/">university-Campus Facilities</option>
+			<option data-campus="university" data-url="/aboutjwu/accreditations/">university-Accreditations</option>
+			<option data-campus="university" data-url="/aboutjwu/affiliations/">university-Affiliations</option>
+			<option data-campus="university" data-url="/aboutjwu/affiliations/general/">university-General University</option>
+			<option data-campus="university" data-url="/aboutjwu/affiliations/campus/">university-Campus Specific</option>
+			<option data-campus="university" data-url="/aboutjwu/nondiscriminationnotice/">university-Nondiscrimination Notice</option>
+			<option data-campus="university" data-url="/aboutjwu/corporationandtrustees/">university-Corporation & Trustees</option>
+			<option data-campus="university" data-url="/aboutjwu/universityleadership/">university-University Leadership</option>
+			<option data-campus="university" data-url="/aboutjwu/academicdirectories/">university-Academic Directories</option>
+			<option data-campus="university" data-url="/aboutjwu/academicdirectories/artsandsciences/">university-Arts & Sciences</option>
+			<option data-campus="university" data-url="/aboutjwu/academicdirectories/business/">university-Business</option>
+			<option data-campus="university" data-url="/aboutjwu/academicdirectories/culinaryarts/">university-Culinary Arts</option>
+			<option data-campus="university" data-url="/aboutjwu/academicdirectories/graduate/">university-Graduate School</option>
+			<option data-campus="university" data-url="/aboutjwu/academicdirectories/hospitality/">university-Hospitality</option>
+			<option data-campus="university" data-url="/aboutjwu/academicdirectories/technology/">university-Technology</option>
+			<option data-campus="university" data-url="/aboutjwu/departmentdirectories/">university-Department Directories</option>
+			<option data-campus="university" data-url="/programsofstudy/">university-Programs of Study</option>
+			<option data-campus="university" data-url="/programsofstudy/artsandsciences/">university-Arts & Sciences</option>
+			<option data-campus="university" data-url="/programsofstudy/business/">university-Business</option>
+			<option data-campus="university" data-url="/programsofstudy/culinary/">university-Culinary</option>
+			<option data-campus="university" data-url="/programsofstudy/hospitality/">university-Hospitality</option>
+			<option data-campus="university" data-url="/programsofstudy/technology/">university-Technology</option>
+			<option data-campus="university" data-url="/programsofstudy/grad/">university-Graduate</option>
+			<option data-campus="university" data-url="/programsofstudy/adultandce/">university-Adult & CE</option>
+			<option data-campus="university" data-url="/programsofstudy/online/">university-Online Learning</option>
+			<option data-campus="university" data-url="/programsofstudy/fullcourselisting/">university-Full Course Listing</option>
+			<option data-campus="university" data-url="/academicinformation/">university-Academic Information</option>
+			<option data-campus="university" data-url="/academicinformation/academiccalendars/">university-Academic Calendars</option>
+			<option data-campus="university" data-url="/academicinformation/academiccalendars/classschedules/">university-Class Schedules</option>
+			<option data-campus="university" data-url="/academicinformation/academiccalendars/summersessions/">university-Summer Sessions</option>
+			<option data-campus="university" data-url="/academicinformation/academicpolicies/">university-Academic Policies</option>
+			<option data-campus="university" data-url="/academicinformation/academicpolicies/academicstandards/">university-Academic Standing</option>
+			<option data-campus="university" data-url="/academicinformation/academicpolicies/attendanceandtardiness/">university-Attendance & Tardiness</option>
+			<option data-campus="university" data-url="/academicinformation/academicpolicies/creditsandgrades/">university-Credits & Grades</option>
+			<option data-campus="university" data-url="/academicinformation/academicpolicies/repeatofcourses/">university-Repeat of Courses</option>
+			<option data-campus="university" data-url="/academicinformation/academicpolicies/transferandcareerprerequisites/">university-Transfer & Career Prerequisites</option>
+			<option data-campus="university" data-url="/academicinformation/transcripts/">university-Transcripts</option>
+			<option data-campus="university" data-url="/academicinformation/requirements/">university-Requirements</option>
+			<option data-campus="university" data-url="/academicinformation/servicelearning/">university-Service Learning</option>
+			<option data-campus="university" data-url="/academicinformation/experientialeducation/">university-Experiential Education</option>
+			<option data-campus="university" data-url="/academicinformation/studyabroad/">university-Study Abroad</option>
+			<option data-campus="university" data-url="/academicinformation/academicfunctions/">university-Academic Functions</option>
+			<option data-campus="university" data-url="/academicinformation/honors/">university-Honors</option>
+			<option data-campus="university" data-url="/academicinformation/honors/latin/">university-Latin Honors</option>
+			<option data-campus="university" data-url="/academicinformation/honors/program/">university-Honors Program</option>
+			<option data-campus="university" data-url="/academicinformation/honors/academicsocieties/">university-Academic Societies</option>
+			<option data-campus="university" data-url="/academicinformation/honors/awards/">university-Awards</option>
+			<option data-campus="university" data-url="/admissions/acceleratedprograms/sharp/">university-SHARP Program</option>
+			<option data-campus="university" data-url="/admissions/">university-Admissions</option>
+			<option data-campus="university" data-url="/admissions/applying/">university-Applying</option>
+			<option data-campus="university" data-url="/admissions/applying/highschoolverification/">university-High School Verification</option>
+			<option data-campus="university" data-url="/admissions/applying/admissionsrequirements/">university-Admissions Requirements</option>
+			<option data-campus="university" data-url="/admissions/applying/graderequirements/">university-Program Requirements</option>
+			<option data-campus="university" data-url="/admissions/applying/admissionsdecision/">university-Admissions Decision</option>
+			<option data-campus="university" data-url="/admissions/applying/deferredenrollment/">university-Deferred Enrollment</option>
+			<option data-campus="university" data-url="/admissions/applying/advancedplacement/">university-Advanced Placement</option>
+			<option data-campus="university" data-url="/admissions/applying/transferstudents/">university-Transfer Students</option>
+			<option data-campus="university" data-url="/admissions/applying/homeschooledstudents/">university-Home-Schooled Students</option>
+			<option data-campus="university" data-url="/admissions/applying/earlydualenrollment/">university-Early/Dual Enrollment</option>
+			<option data-campus="university" data-url="/academicinformation/honors/program/">university-Honors Program</option>
+			<option data-campus="university" data-url="/admissions/applying/undeclared/">university-Undeclared</option>
+			<option data-campus="university" data-url="/admissions/technicalstandards/">university-Technical Standards</option>
+			<option data-campus="university" data-url="/admissions/military/">university-Military</option>
+			<option data-campus="university" data-url="/admissions/international/">university-International</option>
+			<option data-campus="university" data-url="/admissions/international/englishlanguageproficiency/">university-English Language Proficiency</option>
+			<option data-campus="university" data-url="/admissions/international/toeflrequirements/">university-English Proficiency Requirements</option>
+			<option data-campus="university" data-url="/admissions/international/transfercredit/">university-Transfer Credit</option>
+			<option data-campus="university" data-url="/admissions/international/articulationagreements/">university-Articulation Agreements</option>
+			<option data-campus="university" data-url="/admissions/placementtesting/">university-Placement Testing</option>
+			<option data-campus="university" data-url="/admissions/learningassessment/">university-Learning Assessment</option>
+			<option data-campus="university" data-url="/admissions/learningassessment/portfolio/">university-Portfolio Assessment</option>
+			<option data-campus="university" data-url="/admissions/learningassessment/clepexamination/">university-CLEP Examination</option>
+			<option data-campus="university" data-url="/admissions/learningassessment/departmentalchallenge/">university-Departmental Challenge Examination</option>
+			<option data-campus="university" data-url="/admissions/acceleratedprograms/">university-Accelerated Programs</option>
+			<option data-campus="university" data-url="/admissions/acceleratedprograms/culinaryadvancedstanding/">university-Culinary Advanced Standing</option>
+			<option data-campus="university" data-url="/admissions/acceleratedprograms/fastandcollegecredit/">university-FAST & College Credit</option>
+			<option data-campus="university" data-url="/admissions/acceleratedprograms/internationalbaccalaureate/">university-International Baccalaureate</option>
+			<option data-campus="university" data-url="/admissions/acceleratedprograms/sharp/">university-SHARP</option>
+			<option data-campus="university" data-url="/admissions/acceleratedprograms/4+1degrees/">university-4+1 Degrees</option>
+			<option data-campus="university" data-url="/financingyourdegree/">university-Financing Your Degree</option>
+			<option data-campus="university" data-url="/financingyourdegree/tuitionfees/">university-Tuition & Fees</option>
+			<option data-campus="university" data-url="/financingyourdegree/tuitionfees/extensionstudents/">university-Extension Students</option>
+			<option data-campus="university" data-url="/financingyourdegree/tuitionfees/earlyenrollment/">university-Early Enrollment</option>
+			<option data-campus="university" data-url="/financingyourdegree/tuitionfees/eslstudents/">university-ESL Students</option>
+			<option data-campus="university" data-url="/financingyourdegree/otherfees/">university-Other Fees</option>
+			<option data-campus="university" data-url="/financingyourdegree/paymentoptions/">university-Payment Options</option>
+			<option data-campus="university" data-url="/financingyourdegree/refundpolicies/">university-Refund Policies</option>
+			<option data-campus="university" data-url="/financingyourdegree/refundpolicies/georgiaresidents/">university-Georgia Residents</option>
+			<option data-campus="university" data-url="/financingyourdegree/refundpolicies/withdrawalcreditpolicy/">university-Withdrawal Credit Policy</option>
+			<option data-campus="university" data-url="/financingyourdegree/financialobligations/">university-Financial Obligations</option>
+			<option data-campus="university" data-url="/financingyourdegree/financialplanning/">university-Financial Planning</option>
+			<option data-campus="university" data-url="/financingyourdegree/financialaid/">university-Financial Aid</option>
+			<option data-campus="university" data-url="/financingyourdegree/financialaid/howtoapply/">university-How to Apply</option>
+			<option data-campus="university" data-url="/financingyourdegree/financialaid/grantsandloans/">university-Grants & Loans</option>
+			<option data-campus="university" data-url="/financingyourdegree/financialaid/institutionalaid/">university-Institutional Aid</option>
+			<option data-campus="university" data-url="/financingyourdegree/financialaid/outsidescholarships/">university-Outside Scholarships</option>
+			<option data-campus="university" data-url="/financingyourdegree/financialaid/workprograms/">university-Work Programs</option>
+			<option data-campus="university" data-url="/financingyourdegree/academicprogress/">university-Academic Progress</option>
+			<option data-campus="university" data-url="/studentservices/">university-Student Services</option>
+			<option data-campus="university" data-url="/studentservices/academicsupport/">university-Academic Support</option>
+			<option data-campus="university" data-url="/studentservices/counselingservices/">university-Counseling Services</option>
+			<option data-campus="university" data-url="/studentservices/healthservices/">university-Health Services</option>
+			<option data-campus="university" data-url="/studentservices/internationalservices/">university-International Services</option>
+			<option data-campus="university" data-url="/studentservices/orientation/">university-Orientation</option>
+			<option data-campus="university" data-url="/studentservices/residentiallife/">university-Residential Life</option>
+			<option data-campus="university" data-url="/studentservices/safetyandsecurity/">university-Safety & Security</option>
+			<option data-campus="university" data-url="/studentactivities/">university-Student Activities</option>
+			<option data-campus="university" data-url="/studentservices/policies/">university-Policies</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/">denver-ce-About JWU</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/letterfromthepresident/">denver-ce-Letter from President</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/historyofjwu/">denver-ce-History of JWU</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/missionandpurposes/">denver-ce-Mission & Principles</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/campuses/">denver-ce-Campus Facilities</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/accreditations/">denver-ce-Accreditations</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/affiliations/">denver-ce-Affiliations</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/affiliations/general/">denver-ce-General University</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/affiliations/campus/">denver-ce-Campus Specific</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/nondiscriminationnotice/">denver-ce-Nondiscrimination Notice</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/corporationandtrustees/">denver-ce-Corporation & Trustees</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/universityleadership/">denver-ce-University Leadership</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/academicdirectories/">denver-ce-Academic Directories</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/academicdirectories/artsandsciences/">denver-ce-Arts & Sciences</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/academicdirectories/business/">denver-ce-Business</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/academicdirectories/culinaryarts/">denver-ce-Culinary Arts</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/academicdirectories/hospitality/">denver-ce-Hospitality</option>
+			<option data-campus="denver-ce" data-url="/aboutjwu/departmentdirectories/">denver-ce-Department Directories</option>
+			<option data-campus="denver-ce" data-url="/programsofstudy/">denver-ce-Programs of Study</option>
+			<option data-campus="denver-ce" data-url="/programsofstudy/adultandce/">denver-ce-Adult & CE</option>
+			<option data-campus="denver-ce" data-url="/programsofstudy/fullcourselisting/">denver-ce-Full Course Listing</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/">denver-ce-Academic Information</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academiccalendars/">denver-ce-Academic Calendars</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academiccalendars/classschedules/">denver-ce-Class Schedules</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academiccalendars/summersessions/">denver-ce-Summer Sessions</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academicpolicies/">denver-ce-Academic Policies</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academicpolicies/academicstandards/">denver-ce-Academic Standing</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academicpolicies/attendanceandtardiness/">denver-ce-Attendance & Tardiness</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academicpolicies/creditsandgrades/">denver-ce-Credits & Grades</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academicpolicies/repeatofcourses/">denver-ce-Repeat of Courses</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academicpolicies/transferandcareerprerequisites/">denver-ce-Transfer & Career Prerequisites</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/transcripts/">denver-ce-Transcripts</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/requirements/">denver-ce-Requirements</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/experientialeducation/">denver-ce-Experiential Education</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/academicfunctions/">denver-ce-Academic Functions</option>
+			<option data-campus="denver-ce" data-url="/academicinformation/honors/">denver-ce-Honors</option>
+			<option data-campus="denver-ce" data-url="/admissions/">denver-ce-Admissions</option>
+			<option data-campus="denver-ce" data-url="/admissions/applying/">denver-ce-Applying</option>
+			<option data-campus="denver-ce" data-url="/admissions/applying/highschoolverification/">denver-ce-High School Verification</option>
+			<option data-campus="denver-ce" data-url="/admissions/applying/admissionsrequirements/">denver-ce-Admissions Requirements</option>
+			<option data-campus="denver-ce" data-url="/admissions/applying/admissionsdecision/">denver-ce-Admissions Decision</option>
+			<option data-campus="denver-ce" data-url="/admissions/applying/deferredenrollment/">denver-ce-Deferred Enrollment</option>
+			<option data-campus="denver-ce" data-url="/admissions/applying/advancedplacement/">denver-ce-Advanced Placement</option>
+			<option data-campus="denver-ce" data-url="/admissions/applying/transferstudents/">denver-ce-Transfer Students</option>
+			<option data-campus="denver-ce" data-url="/admissions/applying/homeschooledstudents/">denver-ce-Home-Schooled Students</option>
+			<option data-campus="denver-ce" data-url="/admissions/technicalstandards/">denver-ce-Technical Standards</option>
+			<option data-campus="denver-ce" data-url="/admissions/military/">denver-ce-Military</option>
+			<option data-campus="denver-ce" data-url="/admissions/international/">denver-ce-International</option>
+			<option data-campus="denver-ce" data-url="/admissions/international/englishlanguageproficiency/">denver-ce-English Language Proficiency</option>
+			<option data-campus="denver-ce" data-url="/admissions/international/toeflrequirements/">denver-ce-English Proficiency Requirements</option>
+			<option data-campus="denver-ce" data-url="/admissions/placementtesting/">denver-ce-Placement Testing</option>
+			<option data-campus="denver-ce" data-url="/admissions/learningassessment/">denver-ce-Learning Assessment</option>
+			<option data-campus="denver-ce" data-url="/admissions/learningassessment/portfolio/">denver-ce-Portfolio Assessment</option>
+			<option data-campus="denver-ce" data-url="/admissions/learningassessment/clepexamination/">denver-ce-CLEP Examination</option>
+			<option data-campus="denver-ce" data-url="/admissions/learningassessment/departmentalchallenge/">denver-ce-Departmental Challenge Examination</option>
+			<option data-campus="denver-ce" data-url="/admissions/advancedculinary/">denver-ce-Advanced Culinary</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/">denver-ce-Financing Your Degree</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/tuitionfees/">denver-ce-Tuition & Fees</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/otherfees/">denver-ce-Other Fees</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/paymentoptions/">denver-ce-Payment Options</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/refundpolicies/">denver-ce-Refund Policies</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/refundpolicies/georgiaresidents/">denver-ce-Georgia Residents</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/refundpolicies/withdrawalcreditpolicy/">denver-ce-Withdrawal Credit Policy</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/financialobligations/">denver-ce-Financial Obligations</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/financialplanning/">denver-ce-Financial Planning</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/financialaid/">denver-ce-Financial Aid</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/financialaid/howtoapply/">denver-ce-How to Apply</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/financialaid/grantsandloans/">denver-ce-Grants & Loans</option>
+			<option data-campus="denver-ce" data-url="/financingyourdegree/academicprogress/">denver-ce-Academic Progress</option>
+			<option data-campus="denver-ce" data-url="/studentservices/">denver-ce-Student Services</option>
+			<option data-campus="denver-ce" data-url="/studentservices/academicsupport/">denver-ce-Academic Support</option>
+			<option data-campus="denver-ce" data-url="/studentservices/healthservices/">denver-ce-Health Services</option>
+			<option data-campus="denver-ce" data-url="/studentservices/orientation/">denver-ce-Orientation</option>
+			<option data-campus="denver-ce" data-url="/studentservices/policies/">denver-ce-Policies</option>
+			<option data-campus="denver-ce" data-url="/studentservices/safetyandsecurity/">denver-ce-Safety & Security</option>
+			<option data-campus="denver-ce" data-url="/studentactivities/">denver-ce-Student Activities</option>
+			<option data-campus="grad" data-url="/aboutjwu/">grad-About JWU</option>
+			<option data-campus="grad" data-url="/aboutjwu/letterfromthepresident/">grad-Letter from President</option>
+			<option data-campus="grad" data-url="/aboutjwu/historyofjwu/">grad-History of JWU</option>
+			<option data-campus="grad" data-url="/aboutjwu/missionandpurposes/">grad-Mission & Principles</option>
+			<option data-campus="grad" data-url="/aboutjwu/campuses/">grad-Campus Facilities</option>
+			<option data-campus="grad" data-url="/aboutjwu/accreditations/">grad-Accreditations</option>
+			<option data-campus="grad" data-url="/aboutjwu/affiliations/">grad-Affiliations</option>
+			<option data-campus="grad" data-url="/aboutjwu/affiliations/general/">grad-General University</option>
+			<option data-campus="grad" data-url="/aboutjwu/affiliations/campus/">grad-Graduate School</option>
+			<option data-campus="grad" data-url="/aboutjwu/nondiscriminationnotice/">grad-Nondiscrimination Notice</option>
+			<option data-campus="grad" data-url="/aboutjwu/corporationandtrustees/">grad-Corporation & Trustees</option>
+			<option data-campus="grad" data-url="/aboutjwu/universityleadership/">grad-University Leadership</option>
+			<option data-campus="grad" data-url="/aboutjwu/academicdirectories/">grad-Academic Directories</option>
+			<option data-campus="grad" data-url="/aboutjwu/academicdirectories/graduate/">grad-Graduate School</option>
+			<option data-campus="grad" data-url="/aboutjwu/departmentdirectories/">grad-Department Directories</option>
+			<option data-campus="grad" data-url="/programsofstudy/">grad-Programs of Study</option>
+			<option data-campus="grad" data-url="/programsofstudy/grad/">grad-Graduate</option>
+			<option data-campus="grad" data-url="/programsofstudy/fullcourselisting/">grad-Full Course Listing</option>
+			<option data-campus="grad" data-url="/academicinformation/">grad-Academic Information</option>
+			<option data-campus="grad" data-url="/academicinformation/academiccalendars/">grad-Academic Calendars</option>
+			<option data-campus="grad" data-url="/academicinformation/academiccalendars/classschedules/">grad-Class Schedules</option>
+			<option data-campus="grad" data-url="/academicinformation/academiccalendars/summersessions/">grad-Summer Sessions</option>
+			<option data-campus="grad" data-url="/academicinformation/academicpolicies/">grad-Academic Policies</option>
+			<option data-campus="grad" data-url="/academicinformation/academicpolicies/academicstandards/">grad-Academic Standing</option>
+			<option data-campus="grad" data-url="/academicinformation/academicpolicies/attendance/">grad-Attendance</option>
+			<option data-campus="grad" data-url="/academicinformation/academicpolicies/courseregistration/">grad-Course Registration</option>
+			<option data-campus="grad" data-url="/academicinformation/academicpolicies/creditsandgrades/">grad-Credits & Grades</option>
+			<option data-campus="grad" data-url="/academicinformation/academicpolicies/fulltimestatus/">grad-Full-time Status</option>
+			<option data-campus="grad" data-url="/academicinformation/academicpolicies/mbaprerequisites/">grad-MBA Prereqs</option>
+			<option data-campus="grad" data-url="/academicinformation/academicpolicies/reinstatement/">grad-Reinstatement</option>
+			<option data-campus="grad" data-url="/academicinformation/transcripts/">grad-Transcripts</option>
+			<option data-campus="grad" data-url="/academicinformation/requirements/">grad-Requirements</option>
+			<option data-campus="grad" data-url="/academicinformation/experientialeducation/">grad-Experiential Education</option>
+			<option data-campus="grad" data-url="/admissions/">grad-Admissions</option>
+			<option data-campus="grad" data-url="/admissions/applying/">grad-Applying</option>
+			<option data-campus="grad" data-url="/admissions/applying/admissionsrequirements/">grad-Admissions Requirements</option>
+			<option data-campus="grad" data-url="/admissions/applying/mbams/">grad-MBA/MS</option>
+			<option data-campus="grad" data-url="/admissions/applying/mat/">grad-MAT</option>
+			<option data-campus="grad" data-url="/admissions/applying/med/">grad-MEd</option>
+			<option data-campus="grad" data-url="/admissions/applying/edd/">grad-EdD</option>
+			<option data-campus="grad" data-url="/admissions/applying/enrollmentdatechange/">grad-Enrollment Date Change</option>
+			<option data-campus="grad" data-url="/admissions/technicalstandards/">grad-Technical Standards</option>
+			<option data-campus="grad" data-url="/financingyourdegree/">grad-Financing Your Degree</option>
+			<option data-campus="grad" data-url="/financingyourdegree/tuitionfees/">grad-Tuition & Fees</option>
+			<option data-campus="grad" data-url="/financingyourdegree/paymentoptions/">grad-Payment Options</option>
+			<option data-campus="grad" data-url="/financingyourdegree/refundpolicies/">grad-Refund Policies</option>
+			<option data-campus="grad" data-url="/financingyourdegree/financialobligations/">grad-Financial Obligations</option>
+			<option data-campus="grad" data-url="/financingyourdegree/financialplanning/">grad-Financial Planning</option>
+			<option data-campus="grad" data-url="/financingyourdegree/financialaid/">grad-Financial Aid</option>
+			<option data-campus="grad" data-url="/financingyourdegree/academicprogress/">grad-Academic Progress</option>
+			<option data-campus="grad" data-url="/financingyourdegree/financialaid/howtoapply/">grad-How to Apply</option>
+			<option data-campus="grad" data-url="/financingyourdegree/financialaid/grantsandloans/">grad-Loans</option>
+			<option data-campus="grad" data-url="/financingyourdegree/financialaid/institutionalaid/">grad-Institutional Aid</option>
+			<option data-campus="grad" data-url="/financingyourdegree/financialaid/workprograms/">grad-Work Programs</option>
+			<option data-campus="grad" data-url="/studentservices/">grad-Student Services</option>
+			<option data-campus="grad" data-url="/studentservices/healthservices/">grad-Health Services</option>
+			<option data-campus="grad" data-url="/studentservices/internationalservices/">grad-International Services</option>
+			<option data-campus="grad" data-url="/studentservices/orientation/">grad-Orientation</option>
+			<option data-campus="grad" data-url="/studentservices/policies/">grad-Policies</option>
+			<option data-campus="grad" data-url="/studentservices/profcommcenter/">grad-Prof. Comm. Center</option>
+			<option data-campus="grad" data-url="/studentservices/safetyandsecurity/">grad-Safety & Security</option>
+			<option data-campus="grad" data-url="/studentservices/studentswdisabilities/">grad-Students w/Disabilities</option>
+			<option data-campus="online" data-url="/aboutjwu/">online-About JWU</option>
+			<option data-campus="online" data-url="/aboutjwu/letterfromthepresident/">online-Letter from President</option>
+			<option data-campus="online" data-url="/aboutjwu/historyofjwu/">online-History of JWU</option>
+			<option data-campus="online" data-url="/aboutjwu/missionandpurposes/">online-Mission & Principles</option>
+			<option data-campus="online" data-url="/aboutjwu/campuses/">online-Campus Facilities</option>
+			<option data-campus="online" data-url="/aboutjwu/accreditations/">online-Accreditations</option>
+			<option data-campus="online" data-url="/aboutjwu/affiliations/general/">online-Affiliations</option>
+			<option data-campus="online" data-url="/aboutjwu/nondiscriminationnotice/">online-Nondiscrimination Notice</option>
+			<option data-campus="online" data-url="/aboutjwu/corporationandtrustees/">online-Corporation & Trustees</option>
+			<option data-campus="online" data-url="/aboutjwu/universityleadership/">online-University Leadership</option>
+			<option data-campus="online" data-url="/programsofstudy/">online-Programs of Study</option>
+			<option data-campus="online" data-url="/programsofstudy/online/">online-Online Learning</option>
+			<option data-campus="online" data-url="/programsofstudy/fullcourselisting/">online-Full Course Listing</option>
+			<option data-campus="online" data-url="/academicinformation/">online-Academic Information</option>
+			<option data-campus="online" data-url="/academicinformation/academiccalendars/">online-Academic Calendars</option>
+			<option data-campus="online" data-url="/academicinformation/academicpolicies/">online-Academic Policies</option>
+			<option data-campus="online" data-url="/academicinformation/academicpolicies/academicstandards/">online-Academic Standing</option>
+			<option data-campus="online" data-url="/academicinformation/academicpolicies/attendance/">online-Attendance</option>
+			<option data-campus="online" data-url="/academicinformation/academicpolicies/creditsandgrades/">online-Credits & Grades</option>
+			<option data-campus="online" data-url="/academicinformation/academicpolicies/plagiarismturnitin/">online-Plagiarism/turnitin</option>
+			<option data-campus="online" data-url="/academicinformation/academicpolicies/repeatofcourses/">online-Repeat of Courses</option>
+			<option data-campus="online" data-url="/academicinformation/academicpolicies/transferandcareerprerequisites/">online-Transfer & Career Prerequisites</option>
+			<option data-campus="online" data-url="/academicinformation/transcripts/">online-Transcripts</option>
+			<option data-campus="online" data-url="/academicinformation/requirements/">online-Requirements</option>
+			<option data-campus="online" data-url="/academicinformation/experientialeducation/">online-Experiential Education</option>
+			<option data-campus="online" data-url="/academicinformation/academicfunctions/">online-Academic Functions</option>
+			<option data-campus="online" data-url="/academicinformation/honors/">online-Honors</option>
+			<option data-campus="online" data-url="/academicinformation/honors/academicsocieties/">online-Academic Societies</option>
+			<option data-campus="online" data-url="/admissions/">online-Admissions</option>
+			<option data-campus="online" data-url="/admissions/applying/">online-Applying</option>
+			<option data-campus="online" data-url="/admissions/applying/admissionsrequirements/">online-Admissions Requirements</option>
+			<option data-campus="online" data-url="/admissions/applying/admissionsdecision/">online-Admissions Decision</option>
+			<option data-campus="online" data-url="/admissions/applying/deferredenrollment/">online-Deferred Enrollment</option>
+			<option data-campus="online" data-url="/admissions/applying/jwualumni/">online-JWU Alumni</option>
+			<option data-campus="online" data-url="/admissions/applying/transferstudents/">online-Transfer Students</option>
+			<option data-campus="online" data-url="/admissions/technicalstandards/">online-Technical Standards</option>
+			<option data-campus="online" data-url="/admissions/military/">online-Military</option>
+			<option data-campus="online" data-url="/admissions/international/">online-International</option>
+			<option data-campus="online" data-url="/admissions/international/englishlanguageproficiency/">online-English Language Proficiency</option>
+			<option data-campus="online" data-url="/admissions/international/toeflrequirements/">online-English Proficiency Requirements</option>
+			<option data-campus="online" data-url="/admissions/international/transfercredit/">online-Transfer Credit</option>
+			<option data-campus="online" data-url="/admissions/international/articulationagreements/">online-Articulation Agreements</option>
+			<option data-campus="online" data-url="/admissions/placementtesting/">online-Placement Testing</option>
+			<option data-campus="online" data-url="/admissions/learningassessment/">online-Learning Assessment</option>
+			<option data-campus="online" data-url="/admissions/learningassessment/portfolio/">online-Portfolio Assessment</option>
+			<option data-campus="online" data-url="/admissions/learningassessment/clepexamination/">online-CLEP Examination</option>
+			<option data-campus="online" data-url="/admissions/learningassessment/departmentalchallenge/">online-Departmental Challenge Examination</option>
+			<option data-campus="online" data-url="/admissions/acceleratedprograms/internationalbaccalaureate/">online-International Baccalaureate</option>
+			<option data-campus="online" data-url="/financingyourdegree/">online-Financing Your Degree</option>
+			<option data-campus="online" data-url="/financingyourdegree/tuitionfees/">online-Tuition & Fees</option>
+			<option data-campus="online" data-url="/financingyourdegree/paymentoptions/">online-Payment Options</option>
+			<option data-campus="online" data-url="/financingyourdegree/refundpolicies/">online-Refund Policies</option>
+			<option data-campus="online" data-url="/financingyourdegree/refundpolicies/georgiaresidents/">online-Georgia Residents</option>
+			<option data-campus="online" data-url="/financingyourdegree/refundpolicies/withdrawalcreditpolicy/">online-Withdrawal Credit Policy</option>
+			<option data-campus="online" data-url="/financingyourdegree/financialobligations/">online-Financial Obligations</option>
+			<option data-campus="online" data-url="/financingyourdegree/financialplanning/">online-Financial Planning</option>
+			<option data-campus="online" data-url="/financingyourdegree/financialaid/">online-Financial Aid</option>
+			<option data-campus="online" data-url="/financingyourdegree/financialaid/howtoapply/">online-How to Apply</option>
+			<option data-campus="online" data-url="/financingyourdegree/financialaid/grantsandloans/">online-Grants & Loans</option>
+			<option data-campus="online" data-url="/financingyourdegree/financialaid/institutionalaid/">online-Institutional Aid</option>
+			<option data-campus="online" data-url="/financingyourdegree/financialaid/outsidescholarships/">online-Outside Scholarships</option>
+			<option data-campus="online" data-url="/financingyourdegree/academicprogress/">online-Academic Progress</option>
+			<option data-campus="online" data-url="/studentservices/">online-Student Services</option>
+			<option data-campus="online" data-url="/studentservices/academicsupport/">online-Academic Support</option>
+			<option data-campus="online" data-url="/studentservices/policies/">online-Policies</option>
+			<option data-campus="online" data-url="/studentservices/residencyhousng/">online-Residency Housing</option>
+			<option data-campus="online" data-url="/studentservices/safetyandsecurity/">online-Safety & Security</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/">providence-ce-About JWU</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/letterfromthepresident/">providence-ce-Letter from President</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/historyofjwu/">providence-ce-History of JWU</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/missionandpurposes/">providence-ce-Mission & Principles</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/campuses/">providence-ce-Campus Facilities</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/accreditations/">providence-ce-Accreditations</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/affiliations/">providence-ce-Affiliations</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/affiliations/general/">providence-ce-General University</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/affiliations/campus/">providence-ce-Campus Specific</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/nondiscriminationnotice/">providence-ce-Nondiscrimination Notice</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/corporationandtrustees/">providence-ce-Corporation & Trustees</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/universityleadership/">providence-ce-University Leadership</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/academicdirectories/">providence-ce-Academic Directories</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/academicdirectories/artsandsciences/">providence-ce-Arts & Sciences</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/academicdirectories/business/">providence-ce-Business</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/academicdirectories/culinaryarts/">providence-ce-Culinary Arts</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/academicdirectories/graduate/">providence-ce-Graduate School</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/academicdirectories/hospitality/">providence-ce-Hospitality</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/academicdirectories/technology/">providence-ce-Technology</option>
+			<option data-campus="providence-ce" data-url="/aboutjwu/departmentdirectories/">providence-ce-Department Directories</option>
+			<option data-campus="providence-ce" data-url="/programsofstudy/">providence-ce-Programs of Study</option>
+			<option data-campus="providence-ce" data-url="/programsofstudy/adultandce/">providence-ce-Adult & CE</option>
+			<option data-campus="providence-ce" data-url="/programsofstudy/fullcourselisting/">providence-ce-Full Course Listing</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/">providence-ce-Academic Information</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academiccalendars/">providence-ce-Academic Calendars</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academiccalendars/classschedules/">providence-ce-Class Schedules</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academiccalendars/summersessions/">providence-ce-Summer Sessions</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academicpolicies/">providence-ce-Academic Policies</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academicpolicies/academicstandards/">providence-ce-Academic Standing</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academicpolicies/attendanceandtardiness/">providence-ce-Attendance & Tardiness</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academicpolicies/creditsandgrades/">providence-ce-Credits & Grades</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academicpolicies/repeatofcourses/">providence-ce-Repeat of Courses</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academicpolicies/transferandcareerprerequisites/">providence-ce-Transfer & Career Prerequisites</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/transcripts/">providence-ce-Transcripts</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/requirements/">providence-ce-Requirements</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/experientialeducation/">providence-ce-Experiential Education</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/studyabroad/">providence-ce-Study Abroad</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/academicfunctions/">providence-ce-Academic Functions</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/honors/">providence-ce-Honors</option>
+			<option data-campus="providence-ce" data-url="/academicinformation/honors/academicsocieties/">providence-ce-Academic Societies </option>
+			<option data-campus="providence-ce" data-url="/academicinformation/honors/awards/">providence-ce-Awards </option>
+			<option data-campus="providence-ce" data-url="/admissions/">providence-ce-Admissions</option>
+			<option data-campus="providence-ce" data-url="/admissions/applying/">providence-ce-Applying</option>
+			<option data-campus="providence-ce" data-url="/admissions/applying/highschoolverification/">providence-ce-High School Verification</option>
+			<option data-campus="providence-ce" data-url="/admissions/applying/admissionsrequirements/">providence-ce-Admissions Requirements</option>
+			<option data-campus="providence-ce" data-url="/admissions/applying/admissionsdecision/">providence-ce-Admissions Decision</option>
+			<option data-campus="providence-ce" data-url="/admissions/applying/deferredenrollment/">providence-ce-Deferred Enrollment</option>
+			<option data-campus="providence-ce" data-url="/admissions/applying/advancedplacement/">providence-ce-Advanced Placement</option>
+			<option data-campus="providence-ce" data-url="/admissions/applying/transferstudents/">providence-ce-Transfer Students</option>
+			<option data-campus="providence-ce" data-url="/admissions/applying/homeschooledstudents/">providence-ce-Home-Schooled Students</option>
+			<option data-campus="providence-ce" data-url="/admissions/technicalstandards/">providence-ce-Technical Standards</option>
+			<option data-campus="providence-ce" data-url="/admissions/military/">providence-ce-Military</option>
+			<option data-campus="providence-ce" data-url="/admissions/international/">providence-ce-International</option>
+			<option data-campus="providence-ce" data-url="/admissions/international/englishlanguageproficiency/">providence-ce-English Language Proficiency</option>
+			<option data-campus="providence-ce" data-url="/admissions/international/toeflrequirements/">providence-ce-English Proficiency Requirements</option>
+			<option data-campus="providence-ce" data-url="/admissions/placementtesting/">providence-ce-Placement Testing</option>
+			<option data-campus="providence-ce" data-url="/admissions/learningassessment/">providence-ce-Learning Assessment</option>
+			<option data-campus="providence-ce" data-url="/admissions/learningassessment/portfolio/">providence-ce-Portfolio Assessment</option>
+			<option data-campus="providence-ce" data-url="/admissions/learningassessment/clepexamination/">providence-ce-CLEP Examination</option>
+			<option data-campus="providence-ce" data-url="/admissions/learningassessment/departmentalchallenge/">providence-ce-Departmental Challenge Examination</option>
+			<option data-campus="providence-ce" data-url="/admissions/advancedculinary/">providence-ce-Advanced Culinary</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/">providence-ce-Financing Your Degree</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/tuitionfees/">providence-ce-Tuition & Fees</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/otherfees/">providence-ce-Other Fees</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/paymentoptions/">providence-ce-Payment Options</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/refundpolicies/">providence-ce-Refund Policies</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/refundpolicies/georgiaresidents/">providence-ce-Georgia Residents</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/refundpolicies/withdrawalcreditpolicy/">providence-ce-Withdrawal Credit Policy</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/financialobligations/">providence-ce-Financial Obligations</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/financialplanning/">providence-ce-Financial Planning</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/financialaid/">providence-ce-Financial Aid</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/financialaid/howtoapply/">providence-ce-How to Apply</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/financialaid/grantsandloans/">providence-ce-Grants & Loans</option>
+			<option data-campus="providence-ce" data-url="/financingyourdegree/academicprogress/">providence-ce-Academic Progress</option>
+			<option data-campus="providence-ce" data-url="/studentservices/">providence-ce-Student Services</option>
+			<option data-campus="providence-ce" data-url="/studentservices/academicsupport/">providence-ce-Academic Support</option>
+			<option data-campus="providence-ce" data-url="/studentservices/healthservices/">providence-ce-Health Services</option>
+			<option data-campus="providence-ce" data-url="/studentservices/internationalservices/">providence-ce-International Services</option>
+			<option data-campus="providence-ce" data-url="/studentservices/orientation/">providence-ce-Orientation</option>
+			<option data-campus="providence-ce" data-url="/studentservices/parking/">providence-ce-Parking</option>
+			<option data-campus="providence-ce" data-url="/studentservices/policies/">providence-ce-Policies</option>
+			<option data-campus="providence-ce" data-url="/studentservices/safetyandsecurity/">providence-ce-Safety & Security</option>
+			<option data-campus="providence-ce" data-url="/studentactivities/">providence-ce-Student Activities</option>
+			<option data-campus="providence" data-url="/aboutjwu/">providence-About JWU</option>
+			<option data-campus="providence" data-url="/aboutjwu/letterfromthepresident/">providence-Letter from President</option>
+			<option data-campus="providence" data-url="/aboutjwu/historyofjwu/">providence-History of JWU</option>
+			<option data-campus="providence" data-url="/aboutjwu/missionandpurposes/">providence-Mission & Principles</option>
+			<option data-campus="providence" data-url="/aboutjwu/campuses/">providence-Campus Facilities</option>
+			<option data-campus="providence" data-url="/aboutjwu/accreditations/">providence-Accreditations</option>
+			<option data-campus="providence" data-url="/aboutjwu/affiliations/">providence-Affiliations</option>
+			<option data-campus="providence" data-url="/aboutjwu/affiliations/general/">providence-General University</option>
+			<option data-campus="providence" data-url="/aboutjwu/affiliations/campus/">providence-Campus Specific</option>
+			<option data-campus="providence" data-url="/aboutjwu/nondiscriminationnotice/">providence-Nondiscrimination Notice</option>
+			<option data-campus="providence" data-url="/aboutjwu/corporationandtrustees/">providence-Corporation & Trustees</option>
+			<option data-campus="providence" data-url="/aboutjwu/universityleadership/">providence-University Leadership</option>
+			<option data-campus="providence" data-url="/aboutjwu/academicdirectories/">providence-Academic Directories</option>
+			<option data-campus="providence" data-url="/aboutjwu/academicdirectories/artsandsciences/">providence-Arts & Sciences</option>
+			<option data-campus="providence" data-url="/aboutjwu/academicdirectories/business/">providence-Business</option>
+			<option data-campus="providence" data-url="/aboutjwu/academicdirectories/culinaryarts/">providence-Culinary Arts</option>
+			<option data-campus="providence" data-url="/aboutjwu/academicdirectories/graduate/">providence-Graduate School</option>
+			<option data-campus="providence" data-url="/aboutjwu/academicdirectories/hospitality/">providence-Hospitality</option>
+			<option data-campus="providence" data-url="/aboutjwu/academicdirectories/technology/">providence-Technology</option>
+			<option data-campus="providence" data-url="/aboutjwu/departmentdirectories/">providence-Department Directories</option>
+			<option data-campus="providence" data-url="/programsofstudy/">providence-Programs of Study</option>
+			<option data-campus="providence" data-url="/programsofstudy/artsandsciences/">providence-Arts & Sciences</option>
+			<option data-campus="providence" data-url="/programsofstudy/business/">providence-Business</option>
+			<option data-campus="providence" data-url="/programsofstudy/culinary/">providence-Culinary</option>
+			<option data-campus="providence" data-url="/programsofstudy/hospitality/">providence-Hospitality</option>
+			<option data-campus="providence" data-url="/programsofstudy/technology/">providence-Technology</option>
+			<option data-campus="providence" data-url="/programsofstudy/fullcourselisting/">providence-Full Course Listing</option>
+			<option data-campus="providence" data-url="/academicinformation/">providence-Academic Information</option>
+			<option data-campus="providence" data-url="/academicinformation/academiccalendars/">providence-Academic Calendars</option>
+			<option data-campus="providence" data-url="/academicinformation/academiccalendars/classschedules/">providence-Class Schedules</option>
+			<option data-campus="providence" data-url="/academicinformation/academiccalendars/summersessions/">providence-Summer Sessions</option>
+			<option data-campus="providence" data-url="/academicinformation/academicpolicies/">providence-Academic Policies</option>
+			<option data-campus="providence" data-url="/academicinformation/academicpolicies/academicstandards/">providence-Academic Standing</option>
+			<option data-campus="providence" data-url="/academicinformation/academicpolicies/attendanceandtardiness/">providence-Attendance & Tardiness</option>
+			<option data-campus="providence" data-url="/academicinformation/academicpolicies/creditsandgrades/">providence-Credits & Grades</option>
+			<option data-campus="providence" data-url="/academicinformation/academicpolicies/repeatofcourses/">providence-Repeat of Courses</option>
+			<option data-campus="providence" data-url="/academicinformation/academicpolicies/transferandcareerprerequisites/">providence-Transfer & Career Prerequisites</option>
+			<option data-campus="providence" data-url="/academicinformation/transcripts/">providence-Transcripts</option>
+			<option data-campus="providence" data-url="/academicinformation/requirements/">providence-Requirements</option>
+			<option data-campus="providence" data-url="/academicinformation/servicelearning/">providence-Service Learning</option>
+			<option data-campus="providence" data-url="/academicinformation/experientialeducation/">providence-Experiential Education</option>
+			<option data-campus="providence" data-url="/academicinformation/studyabroad/">providence-Study Abroad</option>
+			<option data-campus="providence" data-url="/academicinformation/academicfunctions/">providence-Academic Functions</option>
+			<option data-campus="providence" data-url="/academicinformation/honors/">providence-Honors</option>
+			<option data-campus="providence" data-url="/academicinformation/honors/latin/">providence-Latin Honors</option>
+			<option data-campus="providence" data-url="/academicinformation/honors/program/">providence-Honors Program</option>
+			<option data-campus="providence" data-url="/academicinformation/honors/academicsocieties/">providence-Academic Societies</option>
+			<option data-campus="providence" data-url="/academicinformation/honors/awards/">providence-Awards</option>
+			<option data-campus="providence" data-url="/admissions/acceleratedprograms/sharp/">providence-SHARP Program</option>
+			<option data-campus="providence" data-url="/admissions/">providence-Admissions</option>
+			<option data-campus="providence" data-url="/admissions/applying/">providence-Applying</option>
+			<option data-campus="providence" data-url="/admissions/applying/highschoolverification/">providence-High School Verification</option>
+			<option data-campus="providence" data-url="/admissions/applying/admissionsrequirements/">providence-Admissions Requirements</option>
+			<option data-campus="providence" data-url="/admissions/applying/admissionsdecision/">providence-Admissions Decision</option>
+			<option data-campus="providence" data-url="/admissions/applying/deferredenrollment/">providence-Deferred Enrollment</option>
+			<option data-campus="providence" data-url="/admissions/applying/advancedplacement/">providence-Advanced Placement</option>
+			<option data-campus="providence" data-url="/admissions/applying/transferstudents/">providence-Transfer Students</option>
+			<option data-campus="providence" data-url="/admissions/applying/homeschooledstudents/">providence-Home-Schooled Students</option>
+			<option data-campus="providence" data-url="/admissions/applying/earlydualenrollment/">providence-Early/Dual Enrollment</option>
+			<option data-campus="providence" data-url="/academicinformation/honors/program/">providence-Honors Program</option>
+			<option data-campus="providence" data-url="/admissions/applying/undeclared/">providence-Undeclared</option>
+			<option data-campus="providence" data-url="/admissions/technicalstandards/">providence-Technical Standards</option>
+			<option data-campus="providence" data-url="/admissions/military/">providence-Military</option>
+			<option data-campus="providence" data-url="/admissions/international/">providence-International</option>
+			<option data-campus="providence" data-url="/admissions/international/englishlanguageproficiency/">providence-English Language Proficiency</option>
+			<option data-campus="providence" data-url="/admissions/international/toeflrequirements/">providence-English Proficiency Requirements</option>
+			<option data-campus="providence" data-url="/admissions/international/transfercredit/">providence-Transfer Credit</option>
+			<option data-campus="providence" data-url="/admissions/international/articulationagreements/">providence-Articulation Agreements</option>
+			<option data-campus="providence" data-url="/admissions/placementtesting/">providence-Placement Testing</option>
+			<option data-campus="providence" data-url="/admissions/learningassessment/">providence-Learning Assessment</option>
+			<option data-campus="providence" data-url="/admissions/learningassessment/portfolio/">providence-Portfolio Assessment</option>
+			<option data-campus="providence" data-url="/admissions/learningassessment/clepexamination/">providence-CLEP Examination</option>
+			<option data-campus="providence" data-url="/admissions/learningassessment/departmentalchallenge/">providence-Departmental Challenge Examination</option>
+			<option data-campus="providence" data-url="/admissions/acceleratedprograms/">providence-Accelerated Programs</option>
+			<option data-campus="providence" data-url="/admissions/acceleratedprograms/culinaryadvancedstanding/">providence-Culinary Advanced Standing</option>
+			<option data-campus="providence" data-url="/admissions/acceleratedprograms/fastandcollegecredit/">providence-FAST & College Credit</option>
+			<option data-campus="providence" data-url="/admissions/acceleratedprograms/internationalbaccalaureate/">providence-International Baccalaureate</option>
+			<option data-campus="providence" data-url="/admissions/acceleratedprograms/sharp/">providence-SHARP</option>
+			<option data-campus="providence" data-url="/admissions/acceleratedprograms/4+1degrees/">providence-4+1 Degrees</option>
+			<option data-campus="providence" data-url="/financingyourdegree/">providence-Financing Your Degree</option>
+			<option data-campus="providence" data-url="/financingyourdegree/tuitionfees/">providence-Tuition & Fees</option>
+			<option data-campus="providence" data-url="/financingyourdegree/tuitionfees/extensionstudents/">providence-Extension Students</option>
+			<option data-campus="providence" data-url="/financingyourdegree/tuitionfees/earlyenrollment/">providence-Early Enrollment</option>
+			<option data-campus="providence" data-url="/financingyourdegree/tuitionfees/eslstudents/">providence-ESL Students</option>
+			<option data-campus="providence" data-url="/financingyourdegree/otherfees/">providence-Other Fees</option>
+			<option data-campus="providence" data-url="/financingyourdegree/paymentoptions/">providence-Payment Options</option>
+			<option data-campus="providence" data-url="/financingyourdegree/refundpolicies/">providence-Refund Policies</option>
+			<option data-campus="providence" data-url="/financingyourdegree/refundpolicies/georgiaresidents/">providence-Georgia Residents</option>
+			<option data-campus="providence" data-url="/financingyourdegree/refundpolicies/withdrawalcreditpolicy/">providence-Withdrawal Credit Policy</option>
+			<option data-campus="providence" data-url="/financingyourdegree/financialobligations/">providence-Financial Obligations</option>
+			<option data-campus="providence" data-url="/financingyourdegree/financialplanning/">providence-Financial Planning</option>
+			<option data-campus="providence" data-url="/financingyourdegree/financialaid/">providence-Financial Aid</option>
+			<option data-campus="providence" data-url="/financingyourdegree/financialaid/howtoapply/">providence-How to Apply</option>
+			<option data-campus="providence" data-url="/financingyourdegree/financialaid/grantsandloans/">providence-Grants & Loans</option>
+			<option data-campus="providence" data-url="/financingyourdegree/financialaid/institutionalaid/">providence-Institutional Aid</option>
+			<option data-campus="providence" data-url="/financingyourdegree/financialaid/outsidescholarships/">providence-Outside Scholarships</option>
+			<option data-campus="providence" data-url="/financingyourdegree/financialaid/workprograms/">providence-Work Programs</option>
+			<option data-campus="providence" data-url="/financingyourdegree/academicprogress/">providence-Academic Progress</option>
+			<option data-campus="providence" data-url="/studentservices/">providence-Student Services</option>
+			<option data-campus="providence" data-url="/studentservices/academicsupport/">providence-Academic Support</option>
+			<option data-campus="providence" data-url="/studentservices/healthservices/">providence-Health Services</option>
+			<option data-campus="providence" data-url="/studentservices/internationalservices/">providence-International Services</option>
+			<option data-campus="providence" data-url="/studentservices/orientation/">providence-Orientation</option>
+			<option data-campus="providence" data-url="/studentservices/policies/">providence-Policies</option>
+			<option data-campus="providence" data-url="/studentservices/residentiallife/">providence-Residential Life</option>
+			<option data-campus="providence" data-url="/studentservices/safetyandsecurity/">providence-Safety & Security</option>
+			<option data-campus="providence" data-url="/studentactivities/">providence-Student Activities</option>
+			<option data-campus="other" data-url="/aboutjwu/">other-About JWU</option>
+			<option data-campus="other" data-url="/aboutjwu/letterfromthepresident/">other-Letter from President</option>
+			<option data-campus="other" data-url="/aboutjwu/historyofjwu/">other-History of JWU</option>
+			<option data-campus="other" data-url="/aboutjwu/missionandpurposes/">other-Mission & Principles</option>
+			<option data-campus="other" data-url="/aboutjwu/campuses/">other-Campus Facilities</option>
+			<option data-campus="other" data-url="/aboutjwu/accreditations/">other-Accreditations</option>
+			<option data-campus="other" data-url="/aboutjwu/affiliations/">other-Affiliations</option>
+			<option data-campus="other" data-url="/aboutjwu/affiliations/general/">other-General University</option>
+			<option data-campus="other" data-url="/aboutjwu/affiliations/campus/">other-Campus Specific</option>
+			<option data-campus="other" data-url="/aboutjwu/nondiscriminationnotice/">other-Nondiscrimination Notice</option>
+			<option data-campus="other" data-url="/aboutjwu/corporationandtrustees/">other-Corporation & Trustees</option>
+			<option data-campus="other" data-url="/aboutjwu/universityleadership/">other-University Leadership</option>
+			<option data-campus="other" data-url="/aboutjwu/academicdirectories/">other-Academic Directories</option>
+			<option data-campus="other" data-url="/aboutjwu/academicdirectories/artsandsciences/">other-Arts & Sciences</option>
+			<option data-campus="other" data-url="/aboutjwu/academicdirectories/business/">other-Business</option>
+			<option data-campus="other" data-url="/aboutjwu/academicdirectories/culinaryarts/">other-Culinary Arts</option>
+			<option data-campus="other" data-url="/aboutjwu/academicdirectories/hospitality/">other-Hospitality</option>
+			<option data-campus="other" data-url="/aboutjwu/departmentdirectories/">other-Department Directories</option>
+			<option data-campus="other" data-url="/programsofstudy/">other-Programs of Study</option>
+			<option data-campus="other" data-url="/programsofstudy/artsandsciences/">other-Arts & Sciences</option>
+			<option data-campus="other" data-url="/programsofstudy/business/">other-Business</option>
+			<option data-campus="other" data-url="/programsofstudy/culinary/">other-Culinary</option>
+			<option data-campus="other" data-url="/programsofstudy/hospitality/">other-Hospitality</option>
+			<option data-campus="other" data-url="/programsofstudy/fullcourselisting/">other-Full Course Listing</option>
+			<option data-campus="other" data-url="/academicinformation/">other-Academic Information</option>
+			<option data-campus="other" data-url="/academicinformation/academiccalendars/">other-Academic Calendars</option>
+			<option data-campus="other" data-url="/academicinformation/academiccalendars/classschedules/">other-Class Schedules</option>
+			<option data-campus="other" data-url="/academicinformation/academiccalendars/summersessions/">other-Summer Sessions</option>
+			<option data-campus="other" data-url="/academicinformation/academicpolicies/">other-Academic Policies</option>
+			<option data-campus="other" data-url="/academicinformation/academicpolicies/academicstandards/">other-Academic Standing</option>
+			<option data-campus="other" data-url="/academicinformation/academicpolicies/attendanceandtardiness/">other-Attendance & Tardiness</option>
+			<option data-campus="other" data-url="/academicinformation/academicpolicies/creditsandgrades/">other-Credits & Grades</option>
+			<option data-campus="other" data-url="/academicinformation/academicpolicies/repeatofcourses/">other-Repeat of Courses</option>
+			<option data-campus="other" data-url="/academicinformation/academicpolicies/transferandcareerprerequisites/">other-Transfer & Career Prerequisites</option>
+			<option data-campus="other" data-url="/academicinformation/transcripts/">other-Transcripts</option>
+			<option data-campus="other" data-url="/academicinformation/requirements/">other-Requirements</option>
+			<option data-campus="other" data-url="/academicinformation/experientialeducation/">other-Experiential Education</option>
+			<option data-campus="other" data-url="/academicinformation/studyabroad/">other-Study Abroad</option>
+			<option data-campus="other" data-url="/academicinformation/academicfunctions/">other-Academic Functions</option>
+			<option data-campus="other" data-url="/academicinformation/honors/">other-Honors</option>
+			<option data-campus="other" data-url="/academicinformation/honors/latin/">other-Latin Honors</option>
+			<option data-campus="other" data-url="/academicinformation/honors/program/">other-Honors Program</option>
+			<option data-campus="other" data-url="/academicinformation/honors/academicsocieties/">other-Academic Societies</option>
+			<option data-campus="other" data-url="/academicinformation/honors/awards/">other-Awards</option>
+			<option data-campus="other" data-url="/admissions/acceleratedprograms/sharp/">other-SHARP Program</option>
+			<option data-campus="other" data-url="/admissions/">other-Admissions</option>
+			<option data-campus="other" data-url="/admissions/applying/">other-Applying</option>
+			<option data-campus="other" data-url="/admissions/applying/highschoolverification/">other-High School Verification</option>
+			<option data-campus="other" data-url="/admissions/applying/admissionsrequirements/">other-Admissions Requirements</option>
+			<option data-campus="other" data-url="/admissions/applying/admissionsdecision/">other-Admissions Decision</option>
+			<option data-campus="other" data-url="/admissions/applying/deferredenrollment/">other-Deferred Enrollment</option>
+			<option data-campus="other" data-url="/admissions/applying/advancedplacement/">other-Advanced Placement</option>
+			<option data-campus="other" data-url="/admissions/applying/transferstudents/">other-Transfer Students</option>
+			<option data-campus="other" data-url="/admissions/applying/homeschooledstudents/">other-Home-Schooled Students</option>
+			<option data-campus="other" data-url="/admissions/applying/earlydualenrollment/">other-Early/Dual Enrollment</option>
+			<option data-campus="other" data-url="/academicinformation/honors/program/">other-Honors Program</option>
+			<option data-campus="other" data-url="/admissions/technicalstandards/">other-Technical Standards</option>
+			<option data-campus="other" data-url="/admissions/military/">other-Military</option>
+			<option data-campus="other" data-url="/admissions/international/">other-International</option>
+			<option data-campus="other" data-url="/admissions/international/englishlanguageproficiency/">other-English Language Proficiency</option>
+			<option data-campus="other" data-url="/admissions/international/toeflrequirements/">other-English Proficiency Requirements</option>
+			<option data-campus="other" data-url="/admissions/international/transfercredit/">other-Transfer Credit</option>
+			<option data-campus="other" data-url="/admissions/international/articulationagreements/">other-Articulation Agreements</option>
+			<option data-campus="other" data-url="/admissions/placementtesting/">other-Placement Testing</option>
+			<option data-campus="other" data-url="/admissions/learningassessment/">other-Learning Assessment</option>
+			<option data-campus="other" data-url="/admissions/learningassessment/portfolio/">other-Portfolio Assessment</option>
+			<option data-campus="other" data-url="/admissions/learningassessment/clepexamination/">other-CLEP Examination</option>
+			<option data-campus="other" data-url="/admissions/learningassessment/departmentalchallenge/">other-Departmental Challenge Examination</option>
+			<option data-campus="other" data-url="/admissions/acceleratedprograms/">other-Accelerated Programs</option>
+			<option data-campus="other" data-url="/admissions/acceleratedprograms/culinaryadvancedstanding/">other-Culinary Advanced Standing</option>
+			<option data-campus="other" data-url="/admissions/acceleratedprograms/fastandcollegecredit/">other-FAST & College Credit</option>
+			<option data-campus="other" data-url="/admissions/acceleratedprograms/internationalbaccalaureate/">other-International Baccalaureate</option>
+			<option data-campus="other" data-url="/admissions/acceleratedprograms/sharp/">other-SHARP</option>
+			<option data-campus="other" data-url="/admissions/acceleratedprograms/4+1degrees/">other-4+1 Degrees</option>
+			<option data-campus="other" data-url="/financingyourdegree/">other-Financing Your Degree</option>
+			<option data-campus="other" data-url="/financingyourdegree/tuitionfees/">other-Tuition & Fees</option>
+			<option data-campus="other" data-url="/financingyourdegree/tuitionfees/extensionstudents/">other-Extension Students</option>
+			<option data-campus="other" data-url="/financingyourdegree/tuitionfees/earlyenrollment/">other-Early Enrollment</option>
+			<option data-campus="other" data-url="/financingyourdegree/tuitionfees/eslstudents/">other-ESL Students</option>
+			<option data-campus="other" data-url="/financingyourdegree/otherfees/">other-Other Fees</option>
+			<option data-campus="other" data-url="/financingyourdegree/paymentoptions/">other-Payment Options</option>
+			<option data-campus="other" data-url="/financingyourdegree/refundpolicies/">other-Refund Policies</option>
+			<option data-campus="other" data-url="/financingyourdegree/refundpolicies/georgiaresidents/">other-Georgia Residents</option>
+			<option data-campus="other" data-url="/financingyourdegree/refundpolicies/withdrawalcreditpolicy/">other-Withdrawal Credit Policy</option>
+			<option data-campus="other" data-url="/financingyourdegree/financialobligations/">other-Financial Obligations</option>
+			<option data-campus="other" data-url="/financingyourdegree/financialplanning/">other-Financial Planning</option>
+			<option data-campus="other" data-url="/financingyourdegree/financialaid/">other-Financial Aid</option>
+			<option data-campus="other" data-url="/financingyourdegree/financialaid/howtoapply/">other-How to Apply</option>
+			<option data-campus="other" data-url="/financingyourdegree/financialaid/grantsandloans/">other-Grants & Loans</option>
+			<option data-campus="other" data-url="/financingyourdegree/financialaid/institutionalaid/">other-Institutional Aid</option>
+			<option data-campus="other" data-url="/financingyourdegree/financialaid/outsidescholarships/">other-Outside Scholarships</option>
+			<option data-campus="other" data-url="/financingyourdegree/financialaid/workprograms/">other-Work Programs</option>
+			<option data-campus="other" data-url="/financingyourdegree/academicprogress/">other-Academic Progress</option>
+			<option data-campus="other" data-url="/studentservices/">other-Student Services</option>
+			<option data-campus="other" data-url="/studentservices/academicsupport/">other-Academic Support</option>
+			<option data-campus="other" data-url="/studentservices/healthservices/">other-Health Services</option>
+			<option data-campus="other" data-url="/studentservices/internationalservices/">other-International Services</option>
+			<option data-campus="other" data-url="/studentservices/orientation/">other-Orientation</option>
+			<option data-campus="other" data-url="/studentservices/policies/">other-Policies</option>
+			<option data-campus="other" data-url="/studentservices/residentiallife/">other-Residential Life</option>
+			<option data-campus="other" data-url="/studentservices/safetyandsecurity/">other-Safety & Security</option>
+			<option data-campus="other" data-url="/studentactivities/">other-Student Activities</option>
+		</select>
+		<script src="jquery.js"></script>
+		<script src="htmlnav-polyfills.js"></script>
+		<script src="htmlnav.js"></script>
+		<script>
+			$(document).ready(function () {
+				// Select random node to start.
+				buildNav("other", "/aboutjwu/academicdirectories/");
+
+				// Simple jQuery selector to capture dropdown option, merely for purposes of displaying results.
+				$("#test-the-nav").change(function () {
+					var campus = $(this).find(":selected").data("campus");
+					var url = $(this).find(":selected").data("url");
+					if (campus.length && url.length) {
+						buildNav(campus, url);
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
